@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <table class="bg" >
+        <h1>CALCULATOR</h1>
+        <tr>
+            <td colspan="3"><input type="text" id="result"></td>
+            <td class><input type="button" class="clear" value="c" onclick="clr()"></td>
+        </tr>
+        <tr class="button">
+            <td><button type="button" value="sin" onclick="sin()">sin</button></td>
+            <td><button type="button" value="cos" onclick="cos()">cos</button></td>
+            <td><button type="button" value="tan" onclick="tan()">tan</button></td>
+            <td><button type="button" value="<-" onclick="back()"><-</button></td>
+        </tr>
+        <tr class="button">
+            <td><button type="button" value="1" onclick="dis('1')">1</button></td>
+            <td><button type="button" value="2" onclick="dis('2')">2</button></td>
+            <td><button type="button" value="3" onclick="dis('3')">3</button></td>
+            <td><button type="button" value="+" onclick="dis('+')">+</button></td>
+        </tr>
+        <tr class="button">
+            <td><button type="button" value="4" onclick="dis('4')">4</button></td>
+            <td><button type="button" value="5" onclick="dis('5')">5</button></td>
+            <td><button type="button" value="6" onclick="dis('6')">6</button></td>
+            <td><button type="button" value="-" onclick="dis('-')">-</button></td>
+        </tr>
+        <tr class="button">
+            <td><button type="button" value="7" onclick="dis('7')">7</button></td>
+            <td><button type="button" value="8" onclick="dis('8')">8</button></td>
+            <td><button type="button" value="9" onclick="dis('9')">9</button></td>
+            <td><button type="button" value="*" onclick="dis('*')">*</button></td>
+        </tr>
+        <tr class="button">
+            <td><button type="button" value="." onclick="dis('.')">.</button></td>
+            <td><button type="button" value="0" onclick="dis('0')">0</button></td>
+            <td><button type="button" value="=" onclick="solve()">ANS</button></td>
+            <td><button type="button" value="/" onclick="dis('/')">/</button></td>
+        </tr>
+
+    </table>
+    <script>
+        function dis(val){
+document.getElementById("result").value+=val;
+console.log(val);
+}
+function sin(){
+    var x=document.getElementById("result").value;
+    document.getElementById("result").value=Math.sin(x);
+}
+function cos(){
+    var x=document.getElementById("result").value;
+    document.getElementById("result").value=Math.cos(x);
+}
+function tan(){
+    var x=document.getElementById("result").value;
+    document.getElementById("result").value=Math.tan(x);
+}
+function back(){
+    var s= document.getElementById("result").value;
+    document.getElementById("result").value= s.substr(0, s.length-1);
+}
+function solve(){
+    var x=document.getElementById("result").value;
+    var y=eval(x);
+    document.getElementById("result").value=y;
+}
+function clr()
+{
+    document.getElementById("result").value="";
+}
+    </script>
+</body>
+</html>

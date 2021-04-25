@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orelega One', cursive;
+    font-size: 50px;
+    
+}
+body{
+    background:linear-gradient(45deg, red 0 50%,blue 50% 100%);
+}
+h1{
+text-align: center;
+margin-top: 10px;
+color: burlywood;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+button{
+    width: 100%;
+    background-color: aliceblue;
+    border: 6px solid rgb(43, 39, 39);
+}
+button:hover{
+    background-color: brown;
+    color: white;
+}
+.clear{
+    width:100%;
+    border: 6px solid rgb(43, 39, 39);
+}
+.bg{
+    margin-top: 100px;
+    margin-left: 360px;
+    border: 6px solid rgb(43, 39, 39);
+}
